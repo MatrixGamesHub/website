@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mtx.Constants &mdash; mtxPython 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/themePatch.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="mtxPython 1.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="http://www.matrixgames.rocks" class="icon fa-home"> Matrix Games </a>
+
+          
+            <a href="../../index.html" class="icon fa-book"> mtxPython
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game.html">Create your own game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../objects.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/apiReference.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">mtxPython</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>mtx.Constants</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mtx.Constants</h1><div class="highlight"><pre>
+<span></span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
+
+<span class="c1">###############################</span>
+<span class="c1"># Location / Direction        #</span>
+<span class="c1">###############################</span>
+
+<span class="c1">#:</span>
+<span class="n">UP</span>     <span class="o">=</span> <span class="mh">0x0</span>
+<span class="c1">#:</span>
+<span class="n">RIGHT</span>  <span class="o">=</span> <span class="mh">0x1</span>
+<span class="c1">#:</span>
+<span class="n">DOWN</span>   <span class="o">=</span> <span class="mh">0x2</span>
+<span class="c1">#:</span>
+<span class="n">LEFT</span>   <span class="o">=</span> <span class="mh">0x3</span>
+
+
+<div class="viewcode-block" id="TEXTURE"><a class="viewcode-back" href="../../api/constants.html#mtx.Constants.TEXTURE">[docs]</a><span class="k">class</span> <span class="nc">TEXTURE</span><span class="p">:</span>
+
+<div class="viewcode-block" id="TEXTURE.GROUND"><a class="viewcode-back" href="../../api/constants.html#mtx.Constants.TEXTURE.GROUND">[docs]</a>    <span class="k">class</span> <span class="nc">GROUND</span><span class="p">:</span>
+        <span class="n">NONE</span>         <span class="o">=</span> <span class="mh">0x00</span>
+        <span class="n">RANDOM</span>       <span class="o">=</span> <span class="mh">0x01</span>
+        <span class="n">GRAS</span>         <span class="o">=</span> <span class="mh">0x02</span>
+        <span class="n">WOOD</span>         <span class="o">=</span> <span class="mh">0x03</span>
+        <span class="n">ROCK</span>         <span class="o">=</span> <span class="mh">0x04</span>
+        <span class="n">SAND</span>         <span class="o">=</span> <span class="mh">0x05</span>
+        <span class="n">LAVA</span>         <span class="o">=</span> <span class="mh">0x06</span>
+        <span class="n">SNOW</span>         <span class="o">=</span> <span class="mh">0x07</span>
+        <span class="n">ICE</span>          <span class="o">=</span> <span class="mh">0x08</span>
+        <span class="n">EARTH</span>        <span class="o">=</span> <span class="mh">0x09</span>
+        <span class="n">METAL</span>        <span class="o">=</span> <span class="mh">0x0A</span>
+        <span class="n">MARBLE</span>       <span class="o">=</span> <span class="mh">0x0B</span>
+        <span class="n">PAVEMENT</span>     <span class="o">=</span> <span class="mh">0x0C</span>
+        <span class="n">CONCRETE</span>     <span class="o">=</span> <span class="mh">0x0D</span></div>
+
+
+<div class="viewcode-block" id="TEXTURE.WALL"><a class="viewcode-back" href="../../api/constants.html#mtx.Constants.TEXTURE.WALL">[docs]</a>    <span class="k">class</span> <span class="nc">WALL</span><span class="p">:</span>
+        <span class="n">RED_BRICKS</span>   <span class="o">=</span> <span class="mh">0x00</span>
+        <span class="n">WHITE_BRICKS</span> <span class="o">=</span> <span class="mh">0x01</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Tobias Stampfl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

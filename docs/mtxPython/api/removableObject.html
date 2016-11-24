@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mtx.baseObjects.RemovableObject &mdash; mtxPython 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/themePatch.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="mtxPython 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="mtx.baseObjects" href="baseObjects.html"/>
+        <link rel="next" title="mtx.baseObjects.TriggerObject" href="triggerObject.html"/>
+        <link rel="prev" title="mtx.baseObjects.CollectableObject" href="collectableObject.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="http://www.matrixgames.rocks" class="icon fa-home"> Matrix Games </a>
+
+          
+            <a href="../index.html" class="icon fa-book"> mtxPython
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../game.html">Create your own game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../objects.html">Objects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="apiReference.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="constants.html">mtx.Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gameConsole.html">mtx.GameConsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">mtx.Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">mtx.Game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level.html">mtx.Level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="field.html">mtx.Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cell.html">mtx.Cell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="baseObject.html">mtx.BaseObject</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="baseObjects.html">mtx.baseObjects</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="solidObject.html">mtx.baseObjects.SolidObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movableObject.html">mtx.baseObjects.MovableObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collectableObject.html">mtx.baseObjects.CollectableObject</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">mtx.baseObjects.RemovableObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="triggerObject.html">mtx.baseObjects.TriggerObject</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html">mtx.objects</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">mtxPython</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="apiReference.html">API Reference</a> &raquo;</li>
+      
+          <li><a href="baseObjects.html">mtx.baseObjects</a> &raquo;</li>
+      
+    <li>mtx.baseObjects.RemovableObject</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/removableObject.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mtx-baseobjects-removableobject">
+<h1>mtx.baseObjects.RemovableObject<a class="headerlink" href="#mtx-baseobjects-removableobject" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="mtx.baseObjects.RemovableObject">
+<em class="property">class </em><code class="descname">RemovableObject</code><span class="sig-paren">(</span><em>id</em>, <em>symbol</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/baseObjects/RemovableObject.html#RemovableObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.baseObjects.RemovableObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">mtx.BaseObject.BaseObject</span></code></p>
+<dl class="method">
+<dt id="mtx.baseObjects.RemovableObject.IsRemovable">
+<code class="descname">IsRemovable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/baseObjects/RemovableObject.html#RemovableObject.IsRemovable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.baseObjects.RemovableObject.IsRemovable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the object is removable, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mtx.baseObjects.RemovableObject.RemoveOnEnter">
+<code class="descname">RemoveOnEnter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/baseObjects/RemovableObject.html#RemovableObject.RemoveOnEnter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.baseObjects.RemovableObject.RemoveOnEnter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="triggerObject.html" class="btn btn-neutral float-right" title="mtx.baseObjects.TriggerObject" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="collectableObject.html" class="btn btn-neutral" title="mtx.baseObjects.CollectableObject" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Tobias Stampfl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
