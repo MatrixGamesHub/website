@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +11,10 @@
     <link rel="icon" href="favicon.ico">
 
     <title>Matrix Games</title>
+
+    <link rel="stylesheet" href="css/highlightjs/matrix-games.css">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,17 +43,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Matrix Games</a>
+          <a class="navbar-brand" href="index.php">Matrix Games</a>
         </div>
 
         <div id="navbar1" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Home</a>
+            <li <? if(MENU == "index") echo "class=\"active\""; ?>>
+              <a href="index.php">Home</a>
             </li>
 
-            <li>
-              <a href="gameConsole.html">Game Console</a>
+            <li <? if(MENU == "gameConsole") echo "class=\"active\""; ?>>
+              <a href="gameConsole.php">Game Console</a>
             </li>
 
             <li class="dropdown">
@@ -59,85 +64,17 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="download.html">Get Matrix Games</a>
+            <li <? if(MENU == "download") echo "class=\"active\""; ?>>
+              <a href="download.php">Get Matrix Games</a>
             </li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>
-          Matrix Games
-        </h1>
-        <p>
-          Matrix Games are little games written in python 3 with the mtxPython Framework.
-        </p>
-        <p>
-          These games are based on a two-dimensional matrix like
-          <a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>,
-          <a href="https://en.wikipedia.org/wiki/Bomberman">Bomberman</a> or maze puzzles in
-          general. There is a game console written in Python 3 on which the games can be played.
-          The game console has a thrift interface that allows different clients to connect. These
-          clients do not necessarily have to be written in python, but in every language for which
-          there is also a library for Thrift. Thus, it is possible to write a client with which
-          the games can be presented graphically nicely.
-        </p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>
-            mtxPython
-          </h2>
-          <p>
-            The Python 3 framework every Matrix Game is based on.
-          </p>
-          <p>
-            <a class="btn btn-primary" href="#" role="button">View details &raquo;</a>
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h2>
-            Game Console
-          </h2>
-          <p>
-             To play your Matrix Games you need a game console that manage and run your games.
-             Either you write your own game console or you use our, which is implemented with
-             wxPython.
-          </p>
-          <p>
-            <a class="btn btn-primary" href="gameConsole.html" role="button">View details &raquo;</a>
-          </p>
-       </div>
-        <div class="col-md-4">
-          <h2>
-            Client
-          </h2>
-          <p>
-            The possibilities to visualize the games with wxPython are limited. Thanks to a Thrift
-            interface, it is possible to write a client in an environment that can graphically get
-            the most out of your game. Write your own client or use our client based on Unity.
-          </p>
-          <p>
-            <a class="btn btn-primary" href="#" role="button">View details &raquo;</a>
-          </p>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 VonAncken</p>
-      </footer>
-    </div> <!-- /container -->
-
+    <?
+      require_once(CONTENT);
+    ?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
