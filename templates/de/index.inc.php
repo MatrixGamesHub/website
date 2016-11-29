@@ -28,10 +28,10 @@
             mtxPython
           </h2>
           <p>
-            The Python 3 framework every Matrix Game is based on.
+            The python framework every Matrix Game is based on.
           </p>
           <p>
-            <a class="btn btn-primary" href="#" role="button">View details &raquo;</a>
+            <a class="btn btn-primary" href="mtxPython.php" role="button">View details &raquo;</a>
           </p>
         </div>
         <div class="col-md-4">
@@ -61,10 +61,4 @@
           </p>
         </div>
       </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 VonAncken</p>
-      </footer>
     </div> <!-- /container -->

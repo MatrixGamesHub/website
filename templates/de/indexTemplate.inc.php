@@ -52,6 +52,10 @@
               <a href="index.php">Home</a>
             </li>
 
+            <li <? if(MENU == "mtxPython") echo "class=\"active\""; ?>>
+              <a href="mtxPython.php">mtxPython</a>
+            </li>
+
             <li <? if(MENU == "gameConsole") echo "class=\"active\""; ?>>
               <a href="gameConsole.php">Game Console</a>
             </li>
@@ -75,6 +79,13 @@
     <?
       require_once(CONTENT);
     ?>
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 VonAncken</p>
+      </footer>
+    </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

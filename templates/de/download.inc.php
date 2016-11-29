@@ -76,11 +76,4 @@ pip install -U sphinx_rtd_theme</pre>
           </ul>
         </li>
       </ul>
-
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 VonAncken</p>
-      </footer>
     </div> <!-- /container -->

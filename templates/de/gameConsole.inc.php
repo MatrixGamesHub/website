@@ -75,10 +75,4 @@ service MtxControllerService {
 </code></pre>
 
       </p>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 VonAncken</p>
-      </footer>
     </div> <!-- /container -->
