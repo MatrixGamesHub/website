@@ -1,12 +1,25 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>
-          Downloads
-        </h1>
-        <p>
-          Find Matrix Games on GitHub
-        </p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h1>
+            Downloads
+          </h1>
+          <p>
+            Find Matrix Games on GitHub
+          </p>
+        </div>
+        <div class="col-md-6 text-right">
+          <p>
+          <img src="images/python-white-64.png"/>
+          <img src="images/git-white-64.png"/>
+          </p>
+        </div>
+      </div>
+
+
       </div>
     </div>
 
