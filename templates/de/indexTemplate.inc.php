@@ -60,6 +60,10 @@
               <a href="gameConsole.php">Game Console</a>
             </li>
 
+            <li <? if(MENU == "developers") echo "class=\"active\""; ?>>
+              <a href="developers.php">Developers</a>
+            </li>
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Docs <span class="caret"></span></a>
               <ul class="dropdown-menu">

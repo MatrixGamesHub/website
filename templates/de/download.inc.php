@@ -75,7 +75,7 @@
          </div>
          <div id="collapse2" class="panel-collapse collapse">
            <div class="panel-body">
-             So you want to support the community, great. Here is what you need:<br>
+             So you want to support the community and want to participate in the MatrixGames project, great. Here is what you need:<br>
              <br>
              <div class="panel panel-info">
                <div class="panel-heading">
@@ -98,25 +98,34 @@
                    </li>
                    <br>
                    <li>
-                     Update PIP <i>(important)</i>
-                     <ul>
-                       <li>Open a console and change to your python installation folder.</li>
+                     We provide a virtual environment for python (venv) with all packages necessary for the development.<br>
+
+                     <ol>
                        <li>
-                         Execute following command:
-                         <pre>python -m pip install --upgrade pip</pre>
+                         Create the following directory:
+                         <pre>C:\PythonVirtualEnv\MatrixGames</pre>
+                         If it already exists, make sure it is empty.<br>
+
+                         <b>Attention:</b> You <u>must</u> clone the repository to <code>C:\PythonVirtualEnv\MatrixGames</code>, because the path is hard coded in all binaries (e.g. pip.exe).
+
                        </li>
-                     </ul>
-                   </li>
-                   <br>
-                   <li>
-                     Install the mtxPython Package
-                     <ul>
-                       <li>Open a console and change to the 'Scripts' directory of your python installation folder.</li>
+                       <br>
                        <li>
-                         Execute following command:
-                         <pre>pip install -U mtxPython</pre>
+                         Change to the directory and clone the repository
+                         <ul>
+                           <li>
+                             Via HTTPS:
+                             <pre>git clone https://github.com/MatrixGamesHub/PythonVirtualEnv.git .</pre>
+                           </li>
+                           or<br>
+                           <li>
+                             Via SSH:
+                             <pre>git clone git@github.com:MatrixGamesHub/PythonVirtualEnv.git  .</pre>
+                           </li>
+                         </ul>
+                         <b>Attention:</b> The point at the end is important and ensures that GIT clones into the current directory!
                        </li>
-                     </ul>
+                     </ol>
                    </li>
                  </ol>
                </div>
