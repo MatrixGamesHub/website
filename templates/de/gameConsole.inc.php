@@ -35,7 +35,7 @@
           </p>
         </div>
         <div class="col-md-6">
-          <img src="images/gameConsole/screenshot1.png"/>
+          <img  class="img-responsive" src="images/gameConsole/screenshot1.png"/>
         </div>
       </div>
 
