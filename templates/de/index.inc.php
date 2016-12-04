@@ -49,7 +49,7 @@
        </div>
         <div class="col-md-4">
           <h2>
-            Client
+            Clients
           </h2>
           <p>
             The possibilities to visualize the games with wxPython are limited. Thanks to a Thrift
@@ -57,7 +57,7 @@
             the most out of your game. Write your own client or use our client based on Unity.
           </p>
           <p>
-            <a class="btn btn-primary" href="#" role="button">View details &raquo;</a>
+            <a class="btn btn-primary" href="clients.php" role="button">View details &raquo;</a>
           </p>
         </div>
       </div>

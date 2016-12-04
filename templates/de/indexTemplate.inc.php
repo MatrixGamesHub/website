@@ -60,6 +60,10 @@
               <a href="gameConsole.php">Game Console</a>
             </li>
 
+            <li <? if(MENU == "clients") echo "class=\"active\""; ?>>
+              <a href="clients.php">Clients</a>
+            </li>
+
             <li <? if(MENU == "developers") echo "class=\"active\""; ?>>
               <a href="developers.php">Developers</a>
             </li>
