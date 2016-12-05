@@ -2,7 +2,7 @@
 
   require_once('php/session.php');
 
-  EnterLocation('clients');
+  EnterLocation('rendererService');
 
   require_once(INDEX_TEMPLATE);
 

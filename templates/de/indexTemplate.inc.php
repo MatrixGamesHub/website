@@ -48,35 +48,37 @@
 
         <div id="navbar1" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li <? if(MENU == "index") echo "class=\"active\""; ?>>
+            <li <? if(MENU == 'index') echo "class=\"active\""; ?>>
               <a href="index.php">Home</a>
             </li>
 
-            <li <? if(MENU == "mtxPython") echo "class=\"active\""; ?>>
+            <li <? if(MENU == 'mtxPython') echo "class=\"active\""; ?>>
               <a href="mtxPython.php">mtxPython</a>
             </li>
 
-            <li <? if(MENU == "gameConsole") echo "class=\"active\""; ?>>
+            <li <? if(MENU == 'gameConsole') echo "class=\"active\""; ?>>
               <a href="gameConsole.php">Game Console</a>
             </li>
 
-            <li <? if(MENU == "clients") echo "class=\"active\""; ?>>
+            <li <? if(MENU == 'clients') echo "class=\"active\""; ?>>
               <a href="clients.php">Clients</a>
             </li>
 
-            <li <? if(MENU == "developers") echo "class=\"active\""; ?>>
+            <li <? if(MENU == 'developers') echo "class=\"active\""; ?>>
               <a href="developers.php">Developers</a>
             </li>
 
-            <li class="dropdown">
+            <li class="dropdown <? if(in_array(MENU, array('controllerService', 'rendererService'))) echo "active"; ?>">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Docs <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="docs/mtxPython/index.html">mtxPython</a></li>
+                <li <? if(MENU == 'controllerService') echo "class=\"active\""; ?>><a href="controllerService.php">controller service (Thrift)</a></li>
+                <li <? if(MENU == 'rendererService') echo "class=\"active\""; ?>><a href="rendererService.php">renderer service (Thrift)</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li <? if(MENU == "download") echo "class=\"active\""; ?>>
+            <li <? if(MENU == 'download') echo "class=\"active\""; ?>>
               <a href="download.php">Get Matrix Games</a>
             </li>
           </ul>

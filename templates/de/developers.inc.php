@@ -36,10 +36,10 @@
           <ol>
             <li>
               Create the following directory:
-              <pre>C:\PythonVirtualEnv\MatrixGames</pre>
+              <pre>C:\PythonVirtualEnv\<wbr>MatrixGames</pre>
               If it already exists, make sure it is empty.<br>
 
-              <b>Attention:</b> You <u>must</u> clone the repository to <code>C:\PythonVirtualEnv\MatrixGames</code>, because the path is hard coded in all binaries (e.g. pip.exe).
+              <b>Attention:</b> You <u>must</u> clone the repository to <code>C:\PythonVirtualEnv\<wbr>MatrixGames</code>, because the path is hard coded in all binaries (e.g. pip.exe).
 
             </li>
             <br>
@@ -53,12 +53,12 @@
                 or<br>
                 <li>
                   Via SSH:
-                  <pre>git clone git@github.com:MatrixGamesHub/PythonVirtualEnv.git  .</pre>
+                  <pre>git clone git@github.com:MatrixGamesHub/PythonVirtualEnv.git .</pre>
                 </li>
               </ul>
               <b>Attention:</b> The point at the end is important and ensures that GIT clones into the current directory! <br>
               <br>
-              If you have not installed python in the recommended directory, you have to change the <code>home</code> variable in <code>C:\PythonVirtualEnv\MatrixGames\pyvenv.cfg</code> to your python path.
+              If you have not installed python in the recommended directory, you have to change the <code>home</code> variable in <code>C:\PythonVirtualEnv\<wbr>MatrixGames\pyvenv.cfg</code> to your python path.
             </li>
           </ol>
         </li>
@@ -84,11 +84,11 @@
           </div>
           <div id="collapse1" class="panel-collapse collapse">
             <div class="panel-body">
-              Create a new interpreter <code>Window -> Preferences -> PyDev -> Interpreters -> Python Interpreters</code> named <code>Python - Matrix Games</code> that points to the binary <code>C:\PythonVirtualEnv\MatrixGames\Scripts\python.exe</code>
+              Create a new interpreter <code>Window -&gt; Preferences -&gt; PyDev -&gt; Interpreters -&gt; Python Interpreters</code> named <code>Python - Matrix Games</code> that points to the binary <code>C:\PythonVirtualEnv\<wbr>MatrixGames\Scripts\python.exe</code>
               <img class="img-responsive" src="images/eclipseInstructions/step1.png"/><br>
               <img class="img-responsive" src="images/eclipseInstructions/step2.png"/><br>
 
-              Assign the interpreter <code>Python - Matrix Games</code> to the project by right-clicking on the project <code>Properties -> PyDev - Interpreter/Grammar -> Interpreter</code>.<br>
+              Assign the interpreter <code>Python - Matrix Games</code> to the project by right-clicking on the project <code>Properties -&gt; PyDev -&gt; Interpreter/Grammar -&gt; Interpreter</code>.<br>
               <img class="img-responsive" src="images/eclipseInstructions/step3.png"/>
             </div>
           </div>
@@ -104,10 +104,10 @@
           </div>
           <div id="collapse2" class="panel-collapse collapse">
             <div class="panel-body">
-              You can activate the virtual environment by running the batch <code>C:\PythonVirtualEnv\MatrixGames\Scripts\activate.bat</code>.
+              You can activate the virtual environment by running the batch <code>C:\PythonVirtualEnv\<wbr>MatrixGames\Scripts\activate.bat</code>.
               This will adjust the <code>path</code> environment variable so you can run a script as usual with <code>python script.py</code><br>
               <br>
-              If you don't want the activation, you can simply run a script by using the full path to the interpreter: <code>C:\PythonVirtualEnv\MatrixGames\Scripts\python script.py</code>
+              If you don't want the activation, you can simply run a script by using the full path to the interpreter: <code>C:\PythonVirtualEnv\<wbr>MatrixGames\Scripts\python script.py</code>
             </div>
           </div>
         </div>
