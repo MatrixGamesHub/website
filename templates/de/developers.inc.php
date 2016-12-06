@@ -84,11 +84,12 @@
           </div>
           <div id="collapse1" class="panel-collapse collapse">
             <div class="panel-body">
-              Create a new interpreter <code>Window -&gt; Preferences -&gt; PyDev -&gt; Interpreters -&gt; Python Interpreters</code> named <code>Python - Matrix Games</code> that points to the binary <code>C:\PythonVirtualEnv\<wbr>MatrixGames\Scripts\python.exe</code>
-              <img class="img-responsive" src="images/eclipseInstructions/step1.png"/><br>
-              <img class="img-responsive" src="images/eclipseInstructions/step2.png"/><br>
-
+              Create a new interpreter <code>Window -&gt; Preferences -&gt; PyDev -&gt; Interpreters -&gt; Python Interpreters</code> named <code>Python - Matrix Games</code> that points to the binary <code>C:\PythonVirtualEnv\<wbr>MatrixGames\Scripts\python.exe</code><br>
+              <br>
+              <img class="img-responsive"  src="images/eclipseInstructions/step1.png"/><br>
+              <img class="img-responsive"  src="images/eclipseInstructions/step2.png"/><br>
               Assign the interpreter <code>Python - Matrix Games</code> to the project by right-clicking on the project <code>Properties -&gt; PyDev -&gt; Interpreter/Grammar -&gt; Interpreter</code>.<br>
+              <br>
               <img class="img-responsive" src="images/eclipseInstructions/step3.png"/>
             </div>
           </div>
