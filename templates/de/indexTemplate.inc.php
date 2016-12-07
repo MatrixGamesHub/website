@@ -43,7 +43,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Matrix Games</a>
+
+          <a class="navbar-brand" href="index.php" style="padding-top:10px">
+            <p>
+                  <img src="images/logo_032x032.png"/>
+                  Matrix Games
+            </p>
+
+          </a>
         </div>
 
         <div id="navbar1" class="collapse navbar-collapse">
