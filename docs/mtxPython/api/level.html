@@ -156,7 +156,7 @@
 <h1>mtx.Level<a class="headerlink" href="#mtx-level" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="mtx.Level">
-<em class="property">class </em><code class="descname">Level</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>name=''</em>, <em>groundTexture=0</em>, <em>wallTexture=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Level</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>name=None</em>, <em>groundTexture=0</em>, <em>wallTexture=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Class for managing a game level. It contains a <a class="reference internal" href="field.html#mtx.Field" title="mtx.Field"><code class="xref py py-class docutils literal"><span class="pre">field</span></code></a> and a backup of the
 initial state of the field to allow a level reset. It keeps track on the number of the
@@ -199,8 +199,8 @@ for a wall in the level.</li>
 </dd></dl>
 
 <dl class="staticmethod">
-<dt id="mtx.Level.CreateByDef">
-<em class="property">static </em><code class="descname">CreateByDef</code><span class="sig-paren">(</span><em>defDict</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.CreateByDef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.CreateByDef" title="Permalink to this definition">¶</a></dt>
+<dt id="mtx.Level.Create">
+<em class="property">static </em><code class="descname">Create</code><span class="sig-paren">(</span><em>defDict</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.Create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.Create" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method creates a new level on the basis of a level definition in the form of a
 directory. It defines all the information for the level such as the name, the textures and
 the structure. The level structure itself is defined by an ascii matrix where each ascii
@@ -330,6 +330,21 @@ of the level.</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="mtx.Level.GetNumber">
+<code class="descname">GetNumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetNumber" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of the level.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="mtx.Level.GetObjectCount">
 <code class="descname">GetObjectCount</code><span class="sig-paren">(</span><em>symbol</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetObjectCount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetObjectCount" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -399,6 +414,19 @@ level.</td>
 <dt id="mtx.Level.Reset">
 <code class="descname">Reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.Reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.Reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the level to the initial state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mtx.Level.SetNumber">
+<code class="descname">SetNumber</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.SetNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.SetNumber" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>number</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The number of the level.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

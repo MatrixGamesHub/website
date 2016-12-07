@@ -187,13 +187,13 @@ be overridden to implement the game logic.</p>
 <span class="target" id="getname"></span><dl class="method">
 <dt>
 <code class="descclassname">Game.</code><code class="descname">GetName</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Returns a unique name for the game. The default name is the name of the class.
+<dd><p>Returns the unique name of the game. The default name is the name of the class.
 The method must only be overwritten if the name to be used differs from the class name.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The unique name of this game.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The unique name of the game.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a></td>
 </tr>
@@ -204,13 +204,13 @@ The method must only be overwritten if the name to be used differs from the clas
 <span class="target" id="getdescription"></span><dl class="method">
 <dt>
 <code class="descclassname">Game.</code><code class="descname">GetDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Returns a description of this game. This is shown in a game console during the game
+<dd><p>Returns the description of the game. This is shown in the game console during the game
 selection. By default, an empty string is returned.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The description of this game.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The description of the game.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a></td>
 </tr>
@@ -238,8 +238,8 @@ By default, 1 is returned.</p>
 <span class="target" id="oninit"></span><dl class="method">
 <dt>
 <code class="descclassname">Game.</code><code class="descname">OnInit</code><span class="sig-paren">(</span><em>settings</em><span class="sig-paren">)</span></dt>
-<dd><p>This method is called when the game is <a class="reference internal" href="api/gameConsole.html#mtx.GameConsole.LoadGame" title="mtx.GameConsole.LoadGame"><code class="xref py py-class docutils literal"><span class="pre">loaded</span></code></a> in a game
-console. Variables can be initialized and settings can be set.</p>
+<dd><p>This method is called when the game is <a class="reference internal" href="api/gameConsole.html#mtx.GameConsole.LoadGame" title="mtx.GameConsole.LoadGame"><code class="xref py py-class docutils literal"><span class="pre">loaded</span></code></a> in the
+game console. Variables can be initialized and settings can be set.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -262,7 +262,7 @@ relevant settings can be set.</td>
 <code class="descclassname">Game.</code><code class="descname">OnIdle</code><span class="sig-paren">(</span><em>deltaTime</em><span class="sig-paren">)</span></dt>
 <dd><p>Event method that is called periodically. The frequency of the calls depends on the
 implementation of the game console, but 20 milliseconds are recommended.</p>
-<p>It can be used to perform time-based actions such as the movement of opponents.</p>
+<p>It can be used to perform time-based actions such as the movement of the opponents.</p>
 <p><strong>It can not be guaranteed that the frequency of the calls will be met exactly.</strong>
 To be independent of the frequency, the elapsed time since the last call is passed as a
 parameter.</p>
@@ -281,16 +281,19 @@ parameter.</p>
 <h3>Level related<a class="headerlink" href="#level-related" title="Permalink to this headline">¶</a></h3>
 <span class="target" id="getnextlevel"></span><dl class="method">
 <dt>
-<code class="descclassname">Game.</code><code class="descname">GetNextLevel</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<code class="descclassname">Game.</code><code class="descname">GetNextLevel</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span></dt>
 <dd><p>This method is called from the game console to get the next level.</p>
 <p><strong>! You must override this method and have to return a level object.</strong></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A <a class="reference internal" href="api/level.html#mtx.Level" title="mtx.Level"><code class="xref py py-class docutils literal"><span class="pre">mtx.Level</span></code></a> object to load as the next level.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>number</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The number of the level to be loaded (starting at 1).</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">NotImplementedError</span></code></a> &#8211; If there is not implementation for this method.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A <a class="reference internal" href="api/level.html#mtx.Level" title="mtx.Level"><code class="xref py py-class docutils literal"><span class="pre">mtx.Level</span></code></a> object to load as the next level or None if there is no next
+level.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">NotImplementedError</span></code></a> &#8211; If there is no implementation for this method.</td>
 </tr>
 </tbody>
 </table>
@@ -298,31 +301,19 @@ parameter.</p>
 <p>A level can be created by using a level definition, which is a dictionary that defines
 all the information for the level. The level structure itself is defined by an ascii
 matrix where each ascii sign represents one or more game objects.</p>
-<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetNextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetNextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
     <span class="n">levelDef</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span>  <span class="s1">&#39;Level 1&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;plan&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;#####&#39;</span><span class="p">,</span>
                          <span class="s1">&#39;#1bt#&#39;</span><span class="p">,</span>
                          <span class="s1">&#39;#####&#39;</span><span class="p">]}</span>
 
-    <span class="k">return</span> <span class="n">mtx</span><span class="o">.</span><span class="n">Level</span><span class="o">.</span><span class="n">CreateByDef</span><span class="p">(</span><span class="n">levelDef</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mtx</span><span class="o">.</span><span class="n">Level</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">levelDef</span><span class="p">)</span>
 </pre></div>
-</td></tr></table></div>
-<p>If you want to create a level based on an algorithm than you have to create a
-<a class="reference internal" href="api/level.html#mtx.Level" title="mtx.Level"><code class="xref py py-class docutils literal"><span class="pre">mtx.Level</span></code></a> object and add the game objects with the <a class="reference internal" href="api/level.html#mtx.Level.Add" title="mtx.Level.Add"><code class="xref py py-class docutils literal"><span class="pre">Add</span></code></a>
-method.</p>
-<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetNextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div>
+<p>If you want to create a level based on an algorithm, than you have to create a
+<a class="reference internal" href="api/level.html#mtx.Level" title="mtx.Level"><code class="xref py py-class docutils literal"><span class="pre">mtx.Level</span></code></a> object. Use the:class:<cite>Add&lt;mtx.Level.Add&gt;</cite> method, to add game
+objects to the level.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetNextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
     <span class="n">level</span> <span class="o">=</span> <span class="n">mtx</span><span class="o">.</span><span class="n">Level</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Level 1&#39;</span><span class="p">)</span>
 
     <span class="n">level</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;#&#39;</span><span class="p">)</span>
@@ -330,12 +321,12 @@ method.</p>
 
     <span class="k">return</span> <span class="n">level</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </dd></dl>
 
 <span class="target" id="onlevelstart"></span><dl class="method">
 <dt>
-<code class="descclassname">Game.</code><code class="descname">OnLevelStart</code><span class="sig-paren">(</span><em>level</em>, <em>isReset</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">Game.</code><code class="descname">OnLevelStart</code><span class="sig-paren">(</span><em>level</em>, <em>reset</em><span class="sig-paren">)</span></dt>
 <dd><p>Event method, which is called upon each start or reset of a level.</p>
 <p>It can be used to get the number of different objects in the level (e.g. the number of
 items that need to be collected) or to get a particular object (e.g. the player).</p>
@@ -345,7 +336,7 @@ items that need to be collected) or to get a particular object (e.g. the player)
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>level</strong> (<a class="reference internal" href="api/level.html#mtx.Level" title="mtx.Level"><code class="xref py py-class docutils literal"><span class="pre">mtx.Level</span></code></a>) &#8211; The level object to get access to the objects.</li>
-<li><strong>isReset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; True, if the start was caused by a reset, False otherwise.</li>
+<li><strong>reset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.5)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; True, if the start was caused by a reset, False otherwise.</li>
 </ul>
 </td>
 </tr>

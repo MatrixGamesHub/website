@@ -137,31 +137,58 @@
            <div itemprop="articleBody">
             
   <h1>Source code for mtx.Game</h1><div class="highlight"><pre>
-<span></span>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    mtxPython - A framework to create matrix games.</span>
+<span class="sd">    Copyright (C) 2016  Tobias Stampfl &lt;info@matrixgames.rocks&gt;</span>
+
+<span class="sd">    This program is free software: you can redistribute it and/or modify</span>
+<span class="sd">    it under the terms of the GNU General Public License as published by</span>
+<span class="sd">    the Free Software Foundation in version 3 of the License.</span>
+
+<span class="sd">    This program is distributed in the hope that it will be useful,</span>
+<span class="sd">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="sd">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span>
+<span class="sd">    GNU General Public License for more details.</span>
+
+<span class="sd">    You should have received a copy of the GNU General Public License</span>
+<span class="sd">    along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">ActGroup</span><span class="p">,</span> <span class="n">GameConsole</span><span class="p">,</span> <span class="n">Settings</span>
 
 <div class="viewcode-block" id="GameInterface"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface">[docs]</a><span class="k">class</span> <span class="nc">GameInterface</span><span class="p">():</span>
     <span class="nd">@classmethod</span>
 <div class="viewcode-block" id="GameInterface.GetName"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.GetName">[docs]</a>    <span class="k">def</span> <span class="nf">GetName</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns a unique name for the game. The default name is the name of the class.</span>
+<span class="sd">        Returns the unique name of the game. The default name is the name of the class.</span>
 <span class="sd">        The method must only be overwritten if the name to be used differs from the class name.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            :obj:`str`: The unique name of this game.</span>
+<span class="sd">            :obj:`str`: The unique name of the game.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">__name__</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="GameInterface.GetDescription"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.GetDescription">[docs]</a>    <span class="k">def</span> <span class="nf">GetDescription</span><span class="p">():</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns a description of this game. This is shown in a game console during the game</span>
+<span class="sd">        Returns the description of the game. This is shown in the game console during the game</span>
 <span class="sd">        selection. By default, an empty string is returned.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            :obj:`str`: The description of this game.</span>
+<span class="sd">            :obj:`str`: The description of the game.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="GameInterface.GetAuthor"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.GetAuthor">[docs]</a>    <span class="k">def</span> <span class="nf">GetAuthor</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the author of the game. This is shown in the game console during the game</span>
+<span class="sd">        selection. By default, &#39;Unknown&#39; is returned.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            :obj:`str`: The author of the game.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Unknown&quot;</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="GameInterface.GetMaxPlayers"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.GetMaxPlayers">[docs]</a>    <span class="k">def</span> <span class="nf">GetMaxPlayers</span><span class="p">():</span>
@@ -176,8 +203,8 @@
 
 <div class="viewcode-block" id="GameInterface.OnInit"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnInit">[docs]</a>    <span class="k">def</span> <span class="nf">OnInit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        This method is called when the game is :class:`loaded&lt;mtx.GameConsole.LoadGame&gt;` in a game</span>
-<span class="sd">        console. Variables can be initialized and settings can be set.</span>
+<span class="sd">        This method is called when the game is :class:`loaded&lt;mtx.GameConsole.LoadGame&gt;` in the</span>
+<span class="sd">        game console. Variables can be initialized and settings can be set.</span>
 
 <span class="sd">        Parameters:</span>
 <span class="sd">            settings (:class:`mtx.Settings`): The settings object for this game in which all game</span>
@@ -202,7 +229,7 @@
 <span class="sd">        Event method that is called periodically. The frequency of the calls depends on the</span>
 <span class="sd">        implementation of the game console, but 20 milliseconds are recommended.</span>
 
-<span class="sd">        It can be used to perform time-based actions such as the movement of opponents.</span>
+<span class="sd">        It can be used to perform time-based actions such as the movement of the opponents.</span>
 
 <span class="sd">        **It can not be guaranteed that the frequency of the calls will be met exactly.**</span>
 <span class="sd">        To be independent of the frequency, the elapsed time since the last call is passed as a</span>
@@ -268,7 +295,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="GameInterface.OnLevelStart"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnLevelStart">[docs]</a>    <span class="k">def</span> <span class="nf">OnLevelStart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">isReset</span><span class="p">):</span>
+<div class="viewcode-block" id="GameInterface.OnLevelStart"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnLevelStart">[docs]</a>    <span class="k">def</span> <span class="nf">OnLevelStart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">reset</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Event method, which is called upon each start or reset of a level.</span>
 
@@ -277,24 +304,28 @@
 
 <span class="sd">        Parameters:</span>
 <span class="sd">            level (:class:`mtx.Level`): The level object to get access to the objects.</span>
-<span class="sd">            isReset (:obj:`bool`): True, if the start was caused by a reset, False otherwise.</span>
+<span class="sd">            reset (:obj:`bool`): True, if the start was caused by a reset, False otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="GameInterface.OnUndo"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnUndo">[docs]</a>    <span class="k">def</span> <span class="nf">OnUndo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="GameInterface.GetNextLevel"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.GetNextLevel">[docs]</a>    <span class="k">def</span> <span class="nf">GetNextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="GameInterface.GetNextLevel"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.GetNextLevel">[docs]</a>    <span class="k">def</span> <span class="nf">GetNextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method is called from the game console to get the next level.</span>
 
 <span class="sd">        **! You must override this method and have to return a level object.**</span>
 
+<span class="sd">        Parameters:</span>
+<span class="sd">            number (:obj:`int`): The number of the level to be loaded (starting at 1).</span>
+
 <span class="sd">        Returns:</span>
-<span class="sd">            A :class:`mtx.Level` object to load as the next level.</span>
+<span class="sd">            A :class:`mtx.Level` object to load as the next level or None if there is no next</span>
+<span class="sd">            level.</span>
 
 <span class="sd">        Raises:</span>
-<span class="sd">            NotImplementedError: If there is not implementation for this method.</span>
+<span class="sd">            NotImplementedError: If there is no implementation for this method.</span>
 
 <span class="sd">        Examples:</span>
 <span class="sd">            A level can be created by using a level definition, which is a dictionary that defines</span>
@@ -302,24 +333,22 @@
 <span class="sd">            matrix where each ascii sign represents one or more game objects.</span>
 
 <span class="sd">            .. code-block:: python</span>
-<span class="sd">                :linenos:</span>
 
-<span class="sd">                def GetNextLevel(self):</span>
+<span class="sd">                def GetNextLevel(self, number):</span>
 <span class="sd">                    levelDef = {&#39;name&#39;:  &#39;Level 1&#39;,</span>
 <span class="sd">                                &#39;plan&#39;: [&#39;#####&#39;,</span>
 <span class="sd">                                         &#39;#1bt#&#39;,</span>
 <span class="sd">                                         &#39;#####&#39;]}</span>
 
-<span class="sd">                    return mtx.Level.CreateByDef(levelDef)</span>
+<span class="sd">                    return mtx.Level.Create(levelDef)</span>
 
-<span class="sd">            If you want to create a level based on an algorithm than you have to create a</span>
-<span class="sd">            :class:`mtx.Level` object and add the game objects with the :class:`Add&lt;mtx.Level.Add&gt;`</span>
-<span class="sd">            method.</span>
+<span class="sd">            If you want to create a level based on an algorithm, than you have to create a</span>
+<span class="sd">            :class:`mtx.Level` object. Use the:class:`Add&lt;mtx.Level.Add&gt;` method, to add game</span>
+<span class="sd">            objects to the level.</span>
 
 <span class="sd">            .. code-block:: python</span>
-<span class="sd">                :linenos:</span>
 
-<span class="sd">                def GetNextLevel(self):</span>
+<span class="sd">                def GetNextLevel(self, number):</span>
 <span class="sd">                    level = mtx.Level(5, 3, &#39;Level 1&#39;)</span>
 
 <span class="sd">                    level.Add(0, 0, &#39;#&#39;)</span>
@@ -363,11 +392,15 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span></div>
 
 <div class="viewcode-block" id="Game.NextLevel"><a class="viewcode-back" href="../../api/game.html#mtx.Game.NextLevel">[docs]</a>    <span class="k">def</span> <span class="nf">NextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNextLevel</span><span class="p">()</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">OnLevelStart</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_level</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">levelNumber</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span><span class="o">.</span><span class="n">GetNumber</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetNextLevel</span><span class="p">(</span><span class="n">levelNumber</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">OnNextLevel</span><span class="p">()</span></div>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span><span class="o">.</span><span class="n">GetNumber</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_level</span><span class="o">.</span><span class="n">SetNumber</span><span class="p">(</span><span class="n">levelNumber</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">OnLevelStart</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_level</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">OnNextLevel</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Game.IsCellAccessible"><a class="viewcode-back" href="../../api/game.html#mtx.Game.IsCellAccessible">[docs]</a>    <span class="k">def</span> <span class="nf">IsCellAccessible</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">moving</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">cell</span><span class="o">.</span><span class="n">IsAccessible</span><span class="p">(</span><span class="n">moving</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span><span class="p">)</span></div>
