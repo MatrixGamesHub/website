@@ -31,7 +31,7 @@
         </li>
         <br>
         <li>
-          We provide a virtual environment for python (venv) with all packages necessary for the development.<br>
+          We provide a GitHub repository with the virtual environment for python (venv) with all packages necessary for the development.<br>
 
           <ol>
             <li>
@@ -56,7 +56,7 @@
                   <pre>git clone git@github.com:MatrixGamesHub/PythonVirtualEnv.git .</pre>
                 </li>
               </ul>
-              <b>Attention:</b> The point at the end is important and ensures that GIT clones into the current directory! <br>
+              <b>Attention:</b> The point at the end is important and ensures that Git clones into the current directory! <br>
               <br>
               If you have not installed python in the recommended directory, you have to change the <code>home</code> variable in <code>C:\PythonVirtualEnv\<wbr>MatrixGames\pyvenv.cfg</code> to your python path.
             </li>
