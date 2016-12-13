@@ -176,6 +176,12 @@
 
             <span class="bp">self</span><span class="o">.</span><span class="n">ProcessActGroup</span><span class="p">(</span><span class="n">actGrp</span><span class="p">,</span> <span class="n">renderer</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="GameConsole.UnregisterRenderer"><a class="viewcode-back" href="../../api/gameConsole.html#mtx.GameConsole.UnregisterRenderer">[docs]</a>    <span class="k">def</span> <span class="nf">UnregisterRenderer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_renderers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GameConsole.GetGame"><a class="viewcode-back" href="../../api/gameConsole.html#mtx.GameConsole.GetGame">[docs]</a>    <span class="k">def</span> <span class="nf">GetGame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_game</span></div>
+
 <div class="viewcode-block" id="GameConsole.LoadGame"><a class="viewcode-back" href="../../api/gameConsole.html#mtx.GameConsole.LoadGame">[docs]</a>    <span class="k">def</span> <span class="nf">LoadGame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_game</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">OnShutdown</span><span class="p">()</span>
@@ -187,6 +193,18 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">OnInit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">GetSettings</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">NextLevel</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_gameInitialized</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="GameConsole.StopGame"><a class="viewcode-back" href="../../api/gameConsole.html#mtx.GameConsole.StopGame">[docs]</a>    <span class="k">def</span> <span class="nf">StopGame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_game</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_gameInitialized</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">OnShutdown</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_game</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="n">actGrp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_actQueue</span><span class="o">.</span><span class="n">CreateActGroup</span><span class="p">()</span>
+            <span class="n">actGrp</span><span class="o">.</span><span class="n">AddClearAct</span><span class="p">()</span>
+            <span class="n">actGrp</span><span class="o">.</span><span class="n">Ready</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">ProcessActGroup</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="GameConsole.MovePlayer"><a class="viewcode-back" href="../../api/gameConsole.html#mtx.GameConsole.MovePlayer">[docs]</a>    <span class="k">def</span> <span class="nf">MovePlayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_game</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>

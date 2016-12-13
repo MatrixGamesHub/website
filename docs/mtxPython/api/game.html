@@ -438,7 +438,7 @@ objects to the level.</p>
 
 <dl class="method">
 <dt id="mtx.Game.GameInterface.OnCollect">
-<code class="descname">OnCollect</code><span class="sig-paren">(</span><em>collectable</em>, <em>source</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnCollect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnCollect" title="Permalink to this definition">¶</a></dt>
+<code class="descname">OnCollect</code><span class="sig-paren">(</span><em>collectable</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnCollect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnCollect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Event method, which is called when a collectable object is to be collected. To veto, the
 method should return False.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -526,7 +526,7 @@ items that need to be collected) or to get a particular object (e.g. the player)
 
 <dl class="method">
 <dt id="mtx.Game.GameInterface.OnRemove">
-<code class="descname">OnRemove</code><span class="sig-paren">(</span><em>removable</em>, <em>source</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnRemove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnRemove" title="Permalink to this definition">¶</a></dt>
+<code class="descname">OnRemove</code><span class="sig-paren">(</span><em>removable</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnRemove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnRemove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Event method, which is called when a removable object is to be removed. To veto, the
 method should return False.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -554,7 +554,7 @@ method should return False.</p>
 
 <dl class="method">
 <dt id="mtx.Game.GameInterface.OnTriggerEnter">
-<code class="descname">OnTriggerEnter</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnTriggerEnter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnTriggerEnter" title="Permalink to this definition">¶</a></dt>
+<code class="descname">OnTriggerEnter</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnTriggerEnter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnTriggerEnter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Event method, which is called when an object enters a cell with an event object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -573,7 +573,7 @@ triggered.</li>
 
 <dl class="method">
 <dt id="mtx.Game.GameInterface.OnTriggerLeave">
-<code class="descname">OnTriggerLeave</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnTriggerLeave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnTriggerLeave" title="Permalink to this definition">¶</a></dt>
+<code class="descname">OnTriggerLeave</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Game.html#GameInterface.OnTriggerLeave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Game.GameInterface.OnTriggerLeave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Event method, which is called when an object leaves a cell with an event object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

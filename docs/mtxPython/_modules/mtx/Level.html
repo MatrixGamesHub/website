@@ -167,7 +167,7 @@
 <span class="sd">    different :ref:`game objects&lt;mtx.objects&gt;` and gives access to specific objects.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">groundTexture</span><span class="o">=</span><span class="n">Constants</span><span class="o">.</span><span class="n">TEXTURE</span><span class="o">.</span><span class="n">GROUND</span><span class="o">.</span><span class="n">NONE</span><span class="p">,</span>
                  <span class="n">wallTexture</span><span class="o">=</span><span class="n">Constants</span><span class="o">.</span><span class="n">TEXTURE</span><span class="o">.</span><span class="n">WALL</span><span class="o">.</span><span class="n">WHITE_BRICKS</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -180,18 +180,21 @@
 <span class="sd">            wallTecture (:class:`mtx.TEXTURE.GROUND&lt;mtx.Constants.TEXTURE.GROUND&gt;`): The texture</span>
 <span class="sd">                for a wall in the level.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_field</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_game</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_field</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_groundTexture</span> <span class="o">=</span> <span class="n">groundTexture</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_wallTexture</span> <span class="o">=</span> <span class="n">wallTexture</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_players</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_symbols</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_objects</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_objCount</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_resetDataList</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_newId</span> <span class="o">=</span> <span class="n">count</span><span class="p">()</span>
 
     <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="Level.Create"><a class="viewcode-back" href="../../api/level.html#mtx.Level.Create">[docs]</a>    <span class="k">def</span> <span class="nf">Create</span><span class="p">(</span><span class="n">defDict</span><span class="p">):</span>
+<div class="viewcode-block" id="Level.Create"><a class="viewcode-back" href="../../api/level.html#mtx.Level.Create">[docs]</a>    <span class="k">def</span> <span class="nf">Create</span><span class="p">(</span><span class="n">defDict</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method creates a new level on the basis of a level definition in the form of a</span>
 <span class="sd">        directory. It defines all the information for the level such as the name, the textures and</span>
@@ -228,13 +231,19 @@
         <span class="n">width</span>  <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">plan</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
 
-        <span class="n">level</span> <span class="o">=</span> <span class="n">Level</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">groundTexture</span><span class="p">,</span> <span class="n">wallTexture</span><span class="p">)</span>
+        <span class="n">level</span> <span class="o">=</span> <span class="n">Level</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">groundTexture</span><span class="p">,</span> <span class="n">wallTexture</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plan</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
                 <span class="n">level</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">level</span></div>
+
+<div class="viewcode-block" id="Level.GetGame"><a class="viewcode-back" href="../../api/level.html#mtx.Level.GetGame">[docs]</a>    <span class="k">def</span> <span class="nf">GetGame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_game</span></div>
+
+<div class="viewcode-block" id="Level.SetGame"><a class="viewcode-back" href="../../api/level.html#mtx.Level.SetGame">[docs]</a>    <span class="k">def</span> <span class="nf">SetGame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_game</span> <span class="o">=</span> <span class="n">game</span></div>
 
 <div class="viewcode-block" id="Level.GetNumber"><a class="viewcode-back" href="../../api/level.html#mtx.Level.GetNumber">[docs]</a>    <span class="k">def</span> <span class="nf">GetNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -305,6 +314,15 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_players</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">number</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="Level.GetObject"><a class="viewcode-back" href="../../api/level.html#mtx.Level.GetObject">[docs]</a>    <span class="k">def</span> <span class="nf">GetObject</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objects</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Level.GetObjects"><a class="viewcode-back" href="../../api/level.html#mtx.Level.GetObjects">[docs]</a>    <span class="k">def</span> <span class="nf">GetObjects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
+        <span class="n">objects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">symbol</span><span class="p">:</span>
+            <span class="n">objects</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_symbols</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="k">return</span> <span class="n">objects</span></div>
+
 <div class="viewcode-block" id="Level.GetObjectCount"><a class="viewcode-back" href="../../api/level.html#mtx.Level.GetObjectCount">[docs]</a>    <span class="k">def</span> <span class="nf">GetObjectCount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parameters:</span>
@@ -351,6 +369,9 @@
             <span class="n">obj</span> <span class="o">=</span> <span class="n">objCls</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_newId</span><span class="p">),</span> <span class="n">symbol</span><span class="p">)</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Player</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_players</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">GetNumber</span><span class="p">()]</span> <span class="o">=</span> <span class="n">obj</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_symbols</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_objects</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">GetId</span><span class="p">()]</span> <span class="o">=</span> <span class="n">obj</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">_resetDataList</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">obj</span><span class="p">))</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_field</span><span class="o">.</span><span class="n">GetCell</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>

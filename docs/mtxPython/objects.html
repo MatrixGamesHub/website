@@ -202,32 +202,44 @@ is called, on <a class="reference internal" href="api/cell.html#mtx.Cell" title=
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>1-8</td>
-<td><a class="reference internal" href="api/objectPlayer.html#mtx.objects.Player" title="mtx.objects.Player"><code class="xref py py-class docutils literal"><span class="pre">Player</span></code></a></td>
-<td>A <a class="reference internal" href="api/movableObject.html#mtx.baseObjects.MovableObject" title="mtx.baseObjects.MovableObject"><code class="xref py py-class docutils literal"><span class="pre">movable</span> <span class="pre">object</span></code></a> that represents a player in the game. There must be at least one player and there may be up to 8 players,
-but each number may only occur once.</td>
+<tr class="row-even"><td>-</td>
+<td><a class="reference internal" href="api/objectEmpty.html#mtx.objects.Empty" title="mtx.objects.Empty"><code class="xref py py-class docutils literal"><span class="pre">Empty</span></code></a></td>
+<td>A <a class="reference internal" href="api/solidObject.html#mtx.baseObjects.SolidObject" title="mtx.baseObjects.SolidObject"><code class="xref py py-class docutils literal"><span class="pre">solid</span> <span class="pre">object</span></code></a> that marks the cell as empty. No ground is drawn in this cell.</td>
 </tr>
 <tr class="row-odd"><td>#</td>
 <td><a class="reference internal" href="api/objectWall.html#mtx.objects.Wall" title="mtx.objects.Wall"><code class="xref py py-class docutils literal"><span class="pre">Wall</span></code></a></td>
 <td>A <a class="reference internal" href="api/solidObject.html#mtx.baseObjects.SolidObject" title="mtx.baseObjects.SolidObject"><code class="xref py py-class docutils literal"><span class="pre">solid</span> <span class="pre">object</span></code></a> that can be used to build the structure of a game level.</td>
 </tr>
-<tr class="row-even"><td>-</td>
-<td><a class="reference internal" href="api/objectEmpty.html#mtx.objects.Empty" title="mtx.objects.Empty"><code class="xref py py-class docutils literal"><span class="pre">Empty</span></code></a></td>
-<td>A <a class="reference internal" href="api/solidObject.html#mtx.baseObjects.SolidObject" title="mtx.baseObjects.SolidObject"><code class="xref py py-class docutils literal"><span class="pre">solid</span> <span class="pre">object</span></code></a> that marks the cell as empty. No ground is drawn in this cell.</td>
+<tr class="row-even"><td>1-8</td>
+<td><a class="reference internal" href="api/objectPlayer.html#mtx.objects.Player" title="mtx.objects.Player"><code class="xref py py-class docutils literal"><span class="pre">Player</span></code></a></td>
+<td>A <a class="reference internal" href="api/movableObject.html#mtx.baseObjects.MovableObject" title="mtx.baseObjects.MovableObject"><code class="xref py py-class docutils literal"><span class="pre">movable</span> <span class="pre">object</span></code></a> that represents a player in the game. There must be at least one player and there may be up to 8 players,
+but each number may only occur once.</td>
 </tr>
-<tr class="row-odd"><td>b</td>
+<tr class="row-odd"><td>e</td>
+<td><a class="reference internal" href="api/objectExit.html#mtx.objects.Exit" title="mtx.objects.Exit"><code class="xref py py-class docutils literal"><span class="pre">Exit</span></code></a></td>
+<td>A <a class="reference internal" href="api/triggerObject.html#mtx.baseObjects.TriggerObject" title="mtx.baseObjects.TriggerObject"><code class="xref py py-class docutils literal"><span class="pre">trigger</span> <span class="pre">object</span></code></a> that represents an <strong>unlocked</strong> exit.</td>
+</tr>
+<tr class="row-even"><td>E</td>
+<td><a class="reference internal" href="api/objectExit.html#mtx.objects.Exit" title="mtx.objects.Exit"><code class="xref py py-class docutils literal"><span class="pre">Exit</span></code></a></td>
+<td>A <a class="reference internal" href="api/triggerObject.html#mtx.baseObjects.TriggerObject" title="mtx.baseObjects.TriggerObject"><code class="xref py py-class docutils literal"><span class="pre">trigger</span> <span class="pre">object</span></code></a> that represents an <strong>locked</strong> exit.</td>
+</tr>
+<tr class="row-odd"><td>k</td>
+<td><a class="reference internal" href="api/objectKey.html#mtx.objects.Key" title="mtx.objects.Key"><code class="xref py py-class docutils literal"><span class="pre">Key</span></code></a></td>
+<td>A <a class="reference internal" href="api/collectableObject.html#mtx.baseObjects.CollectableObject" title="mtx.baseObjects.CollectableObject"><code class="xref py py-class docutils literal"><span class="pre">collectable</span> <span class="pre">object</span></code></a> that represents a key to unlock something.</td>
+</tr>
+<tr class="row-even"><td>b</td>
 <td><a class="reference internal" href="api/objectBox.html#mtx.objects.Box" title="mtx.objects.Box"><code class="xref py py-class docutils literal"><span class="pre">Box</span></code></a></td>
 <td>A <a class="reference internal" href="api/movableObject.html#mtx.baseObjects.MovableObject" title="mtx.baseObjects.MovableObject"><code class="xref py py-class docutils literal"><span class="pre">movable</span> <span class="pre">object</span></code></a> that represents a wooden box.</td>
 </tr>
-<tr class="row-even"><td>t</td>
+<tr class="row-odd"><td>t</td>
 <td><a class="reference internal" href="api/objectTarget.html#mtx.objects.Target" title="mtx.objects.Target"><code class="xref py py-class docutils literal"><span class="pre">Target</span></code></a></td>
 <td>A <a class="reference internal" href="api/triggerObject.html#mtx.baseObjects.TriggerObject" title="mtx.baseObjects.TriggerObject"><code class="xref py py-class docutils literal"><span class="pre">trigger</span> <span class="pre">object</span></code></a> that represents a destination for another object.</td>
 </tr>
-<tr class="row-odd"><td>+</td>
+<tr class="row-even"><td>+</td>
 <td><a class="reference internal" href="api/objectTile.html#mtx.objects.Tile" title="mtx.objects.Tile"><code class="xref py py-class docutils literal"><span class="pre">Tile</span></code></a></td>
 <td>A <a class="reference internal" href="api/removableObject.html#mtx.baseObjects.RemovableObject" title="mtx.baseObjects.RemovableObject"><code class="xref py py-class docutils literal"><span class="pre">removable</span> <span class="pre">object</span></code></a> a player can walk on and that is removed as soon as the player leaves it.</td>
 </tr>
-<tr class="row-even"><td>.</td>
+<tr class="row-odd"><td>.</td>
 <td><a class="reference internal" href="api/objectDot.html#mtx.objects.Dot" title="mtx.objects.Dot"><code class="xref py py-class docutils literal"><span class="pre">Dot</span></code></a></td>
 <td>A <a class="reference internal" href="api/collectableObject.html#mtx.baseObjects.CollectableObject" title="mtx.baseObjects.CollectableObject"><code class="xref py py-class docutils literal"><span class="pre">collectable</span> <span class="pre">object</span></code></a> that represents a PacDot that can be collected by a player.</td>
 </tr>

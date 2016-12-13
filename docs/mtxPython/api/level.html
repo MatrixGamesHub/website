@@ -156,7 +156,7 @@
 <h1>mtx.Level<a class="headerlink" href="#mtx-level" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="mtx.Level">
-<em class="property">class </em><code class="descname">Level</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>name=None</em>, <em>groundTexture=0</em>, <em>wallTexture=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">Level</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>name=None</em>, <em>number=None</em>, <em>groundTexture=0</em>, <em>wallTexture=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <p>Class for managing a game level. It contains a <a class="reference internal" href="field.html#mtx.Field" title="mtx.Field"><code class="xref py py-class docutils literal"><span class="pre">field</span></code></a> and a backup of the
 initial state of the field to allow a level reset. It keeps track on the number of the
@@ -200,7 +200,7 @@ for a wall in the level.</li>
 
 <dl class="staticmethod">
 <dt id="mtx.Level.Create">
-<em class="property">static </em><code class="descname">Create</code><span class="sig-paren">(</span><em>defDict</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.Create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.Create" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">Create</code><span class="sig-paren">(</span><em>defDict</em>, <em>number=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.Create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.Create" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method creates a new level on the basis of a level definition in the form of a
 directory. It defines all the information for the level such as the name, the textures and
 the structure. The level structure itself is defined by an ascii matrix where each ascii
@@ -299,6 +299,11 @@ sign represents one or more game objects.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="mtx.Level.GetGame">
+<code class="descname">GetGame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetGame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="mtx.Level.GetGroundTexture">
 <code class="descname">GetGroundTexture</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetGroundTexture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetGroundTexture" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -345,6 +350,11 @@ of the level.</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="mtx.Level.GetObject">
+<code class="descname">GetObject</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="mtx.Level.GetObjectCount">
 <code class="descname">GetObjectCount</code><span class="sig-paren">(</span><em>symbol</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetObjectCount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetObjectCount" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -360,6 +370,11 @@ of the level.</td>
 </tbody>
 </table>
 </dd></dl>
+
+<dl class="method">
+<dt id="mtx.Level.GetObjects">
+<code class="descname">GetObjects</code><span class="sig-paren">(</span><em>symbol</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.GetObjects"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.GetObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="mtx.Level.GetPlayer">
@@ -415,6 +430,11 @@ level.</td>
 <code class="descname">Reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.Reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.Reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the level to the initial state.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="mtx.Level.SetGame">
+<code class="descname">SetGame</code><span class="sig-paren">(</span><em>game</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mtx/Level.html#Level.SetGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mtx.Level.SetGame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="mtx.Level.SetNumber">
