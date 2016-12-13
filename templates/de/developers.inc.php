@@ -65,12 +65,18 @@
       </ol>
 
       <h2>
+        Get the code
+      </h2>
+      <p>
+        You find all the code on <a href="https://github.com/MatrixGamesHub">https://github.com/MatrixGamesHub</a>.
+      </p>
+
+      <h2>
         How to run python scripts
       </h2>
       <p>
         The virtual environment contains the binary of the python interpreter (python.exe), which you have to use if you want to run scripts from the Matrix Games project.
       </p>
-
 
       <div class="panel-group" id="accordion">
 
@@ -86,11 +92,11 @@
             <div class="panel-body">
               Create a new interpreter <code>Window -&gt; Preferences -&gt; PyDev -&gt; Interpreters -&gt; Python Interpreters</code> named <code>Python - Matrix Games</code> that points to the binary <code>C:\PythonVirtualEnv\<wbr>MatrixGames\Scripts\python.exe</code><br>
               <br>
-              <img class="img-responsive"  src="images/eclipseInstructions/step1.png"/><br>
-              <img class="img-responsive"  src="images/eclipseInstructions/step2.png"/><br>
+              <img class="img-responsive" src="images/instructions/eclipseStep1.png"/><br>
+              <img class="img-responsive" src="images/instructions/eclipseStep2.png"/><br>
               Assign the interpreter <code>Python - Matrix Games</code> to the project by right-clicking on the project <code>Properties -&gt; PyDev -&gt; Interpreter/Grammar -&gt; Interpreter</code>.<br>
               <br>
-              <img class="img-responsive" src="images/eclipseInstructions/step3.png"/>
+              <img class="img-responsive" src="images/instructions/eclipseStep3.png"/>
             </div>
           </div>
         </div>

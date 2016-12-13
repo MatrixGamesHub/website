@@ -75,12 +75,13 @@
               <a href="developers.php">Developers</a>
             </li>
 
-            <li class="dropdown <? if(in_array(MENU, array('controllerService', 'rendererService'))) echo "active"; ?>">
+            <li class="dropdown <? if(in_array(MENU, array('controllerService', 'rendererService', 'license'))) echo "active"; ?>">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Docs <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="docs/mtxPython/index.html">mtxPython</a></li>
-                <li <? if(MENU == 'controllerService') echo "class=\"active\""; ?>><a href="controllerService.php">controller service (Thrift)</a></li>
-                <li <? if(MENU == 'rendererService') echo "class=\"active\""; ?>><a href="rendererService.php">renderer service (Thrift)</a></li>
+                <li <? if(MENU == 'controllerService') echo "class=\"active\""; ?>><a href="controllerService.php">Controller Service (Thrift)</a></li>
+                <li <? if(MENU == 'rendererService') echo "class=\"active\""; ?>><a href="rendererService.php">Renderer Service (Thrift)</a></li>
+                <li <? if(MENU == 'license') echo "class=\"active\""; ?>><a href="license.php">License (GPLv3)</a></li>
               </ul>
             </li>
           </ul>
@@ -100,7 +101,16 @@
       <hr>
 
       <footer>
-        <p>&copy; 2016 VonAncken</p>
+        <p style="text-align: center;">
+          <img src="images/logo_032x032.png"/>
+          &nbsp;
+          Copyright &copy; 2016, <a href="https://github.com/VonAncken">VonAncken</a>
+          &nbsp;&nbsp;
+          <span style="display:inline-block;">Licensed under the <a href="license.php">GNU General Public License v3 (GPLv3)</a>.</span>
+          &nbsp;&nbsp;
+          <span style="display:inline-block;">Join us on <a href="https://github.com/MatrixGamesHub">GitHub</a>.</span>
+        </p>
+
       </footer>
     </div> <!-- /container -->
 

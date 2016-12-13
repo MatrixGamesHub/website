@@ -77,147 +77,47 @@
            <div class="panel-body">
              So you want to support the community and want to participate in the MatrixGames project, great. Here is what you need:<br>
              <br>
-             <div class="panel panel-info">
-               <div class="panel-heading">
-                 <div class="row" style="display: table;table-layout: fixed;">
-                   <div class="col-md-12" style="display:table-cell;vertical-align:middle;float: none;">
-                     First you have to set up a python development environment.
-                   </div>
-                   <div class="col-md-12 text-right" style="display:table-cell;vertical-align:middle;float: none;">
-                     <img src="images/python-black-24.png"/>
-                   </div>
-                 </div>
-               </div>
-               <div class="panel-body">
-                 <ol>
-                   <li>
-                     Download and install Python 3.4 <i>(recommended directory: `C:\Python34`):</i>
-                     <br> <br>
-                     <a href="https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi"
-                        class="btn btn-primary" role="button"> Download </a>
-                   </li>
+             <div style="margin-left:20px">
+               <ol>
+                 <li>
+                   Go to <a href"https://github.com/join">https://github.com/join</a> and create an account. If you already have a
+                   GitHub account, you can go right to the next step.<br>
                    <br>
-                   <li>
-                     We provide a virtual environment for python (venv) with all packages necessary for the development.<br>
-
-                     <ol>
-                       <li>
-                         Create the following directory:
-                         <pre>C:\PythonVirtualEnv\MatrixGames</pre>
-                         If it already exists, make sure it is empty.<br>
-
-                         <b>Attention:</b> You <u>must</u> clone the repository to <code>C:\PythonVirtualEnv\MatrixGames</code>, because the path is hard coded in all binaries (e.g. pip.exe).
-
-                       </li>
-                       <br>
-                       <li>
-                         Change to the directory and clone the repository
-                         <ul>
-                           <li>
-                             Via HTTPS:
-                             <pre>git clone https://github.com/MatrixGamesHub/PythonVirtualEnv.git .</pre>
-                           </li>
-                           or<br>
-                           <li>
-                             Via SSH:
-                             <pre>git clone git@github.com:MatrixGamesHub/PythonVirtualEnv.git  .</pre>
-                           </li>
-                         </ul>
-                         <b>Attention:</b> The point at the end is important and ensures that GIT clones into the current directory!
-                       </li>
-                     </ol>
-                   </li>
-                 </ol>
-               </div>
-             </div>
-             <div class="panel panel-info">
-               <div class="panel-heading">
-                 <div class="row" style="display: table;table-layout: fixed;">
-                   <div class="col-md-12" style="display:table-cell;vertical-align:middle;float: none;">
-                     Now become part of the community and get the MatrixGames repository.
-                   </div>
-                   <div class="col-md-12 text-right" style="display:table-cell;vertical-align:middle;float: none;">
-                     <img src="images/community-black-24.png"/>
-                   </div>
-                 </div>
-               </div>
-               <div class="panel-body">
-                 The Matrix Games project is available on <a href="https://github.com/MatrixGamesHub">GitHub</a>.<br>
-                 Fork and clone the <a href="https://github.com/MatrixGamesHub/MatrixGames"><b>MatrixGames repository</b></a>.
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-
-       <div class="panel panel-default">
-         <div class="panel-heading">
-           <div class="row" style="display: table;table-layout: fixed;">
-             <div class="col-md-12" style="display:table-cell;vertical-align:middle;float: none;">
-               <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                 <h4 class="panel-title">
-                   I would like to work on the framework (mtxPython, clients)
-                 </h4>
-               </a>
-             </div>
-             <div class="col-md-12 text-right" style="display:table-cell;vertical-align:middle;float: none;">
-               <table>
-                 <tr>
-                   <td> <img src="images/community-black-32.png"/> </td>
-                   <td>&nbsp;&nbsp;</td>
-                   <td> <img src="images/gamepad-black-32.png"/> </td>
-                 </tr>
-               </table>
-             </div>
-           </div>
-         </div>
-         <div id="collapse3" class="panel-collapse collapse">
-           <div class="panel-body">
-             Great that you want to support us and want to participate in the MatrixGames project. Here is what you need:<br>
-             <br>
-             <div class="panel panel-info">
-               <div class="panel-heading">
-                 <div class="row" style="display: table;table-layout: fixed;">
-                   <div class="col-md-12" style="display:table-cell;vertical-align:middle;float: none;">
-                     First you have to set up a python development environment.
-                   </div>
-                   <div class="col-md-12 text-right" style="display:table-cell;vertical-align:middle;float: none;">
-                     <img src="images/python-black-24.png"/>
-                   </div>
-                 </div>
-               </div>
-               <div class="panel-body">
-                 <ol>
-                   <li>
-                     Download and install Python 3.4 <i>(recommended directory: `C:\Python34`):</i>
-                     <br> <br>
-                     <a href="https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi"
-                        class="btn btn-primary" role="button"> Download </a>
-                   </li>
+                   When you sign up, you will be asked for your personal plan. You can choose
+                   <b>Free</b>, because MatrixGames is a public project and a free account is all
+                   you need to join.
+                 </li>
+                 <br>
+                 <li>
+                   Now you need the MatrixGames repository:
+                   <a href"https://github.com/MatrixGamesHub/MatrixGames">https://github.com/MatrixGamesHub/MatrixGames</a><br>
                    <br>
-                   <li>
-                     Update PIP <i>(important)</i>
-                     <ul>
-                       <li>Open a console and change to your python installation folder.</li>
-                       <li>
-                         Execute following command:
-                         <pre>python -m pip install --upgrade pip</pre>
-                       </li>
-                     </ul>
-                   </li>
+                   Because you can not make any changes to the repository, you have to either create a new branch ... <br>
                    <br>
-                   <li>
-                     Install the mtxPython Package
-                     <ul>
-                       <li>Open a console and change to the 'Scripts' directory of your python installation folder.</li>
-                       <li>
-                         Execute following command:
-                         <pre>pip install -U mtxPython</pre>
-                       </li>
-                     </ul>
-                   </li>
-                 </ol>
-               </div>
+                   <img class="img-responsive" src="images/instructions/gitHubCreateNewBranch.png"/><br>
+                   ... or you fork the repository to your account.
+                   <img class="img-responsive" src="images/instructions/gitHubFork.png"/><br>
+                   <br>
+                   If you create a new branch, it will be listed on the
+                   <i>MatrixGamesHub/MatrixGames</i> repository. If you fork the branch, you get
+                   a new repository in your own account.<br>
+                   <br>
+                   Now clone the branch or the repository.<br>
+                   Once you have a stable version of your changes, you can do a pull request, to
+                   get your code to the master branch.
+                 </li>
+                 <br>
+                 <li>
+                   The last thing you need, is the package with the binaries to run the games. It
+                   is a portable package, so just download and unpack. <br>
+                   <br>
+                   <a href="download/MatrixGamesSlim.zip" class="btn btn-primary" role="button"> Download </a><br>
+                   <br>
+
+                   The first time you run the GameConsole, you will be asked to select the games directory.
+                   Select the <code>Games</code> directory from the branch you cloned in the last step.
+                 </li>
+               </ol>
              </div>
            </div>
          </div>
@@ -229,7 +129,7 @@
              <div class="col-md-12" style="display:table-cell;vertical-align:middle;float: none;">
                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
                  <h4 class="panel-title">
-                   I want it all
+                   I would like to work on the whole project (framework, clients, games, website)
                  </h4>
                </a>
              </div>
@@ -248,94 +148,16 @@
          </div>
          <div id="collapse4" class="panel-collapse collapse">
            <div class="panel-body">
+             Great that you want to support us and want to participate in the MatrixGames project. <br>
+             <br>
+             You will find all the code on <a href="https://github.com/MatrixGamesHub">https://github.com/MatrixGamesHub</a>.<br>
+             Follow the <a href="developers.php">developers</a> instructions to set up a development environment.<br>
+             <br>
+             If you want to become a member of the project in GitHub just <a href="mailto:info@matrixgames.rocks?Subject=I%20would%20like%20to%20join%20the%20MatrixGames%20project" target="_top">send a mail</a> with your GitHub name.
            </div>
          </div>
        </div>
 
       </div>
-
-
-
-
-
-<!--
-
-
-      <h2>
-        mtxPython
-      </h2>
-      <p>
-        The mtxPython package is hosted on <a href="https://pypi.org/project/mtxPython"> <b> PyPi
-        (Python Package Index) </b> </a> so you can easily install the package with pip:<br>
-        <pre>pip install -U mtxPython</pre>
-      </p>
-
-      <h2>
-        You want the whole project?
-      </h2>
-      <p>
-        Please visit <a href="https://github.com/MatrixGamesHub" target="_blank"><b>github.com/MatrixGamesHub</b></a>
-      </p>
-
-      <h2>
-        Matrix Games Binaries
-      </h2>
-       Creating or playing matrix games without a devolopment environment:<br>
-
-       Windows: <a href="download/MatrixGames.zip"> <b>MatrixGames.zip</b> </a>
-
-      <hr>
-
-      <h2>
-        Python environment installation guide
-      </h2>
-      <ul>
-        <li>
-          Download and install Python 3.4 <i>(recommended directory: `C:\Python34`):</i>
-          <pre><a href="https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi" target="_blank">https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi</a></pre>
-        </li>
-        <li>
-          Update PIP <i>(important):</i>
-          <ul>
-            <li>Open a console and change to the python installation folder.</li>
-            <li>
-              Execute the following command:
-              <pre>python -m pip install --upgrade pip</pre>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Install serveral packages:
-          <ul>
-            <li>Open a console and change to the 'Scripts' directory of the python installation folder.</li>
-            <li>
-              Execute the following commands <i>(required):</i>
-              <pre>pip install -U --pre -f https://wxpython.org/Phoenix/snapshot-builds/ wxPython_Phoenix
-pip install -U thrift</pre>
-            </li>
-            <li>
-              Execute the following commands <i>(to build executables):</i>
-              <pre>pip install -U py2exe</pre>
-            </li>
-            <li>
-              Execute the following commands <i>(to build documentation):</i>
-              <pre>pip install -U Sphinx
-pip install -U sphinx_rtd_theme</pre>
-            </li>
-
-          </ul>
-        </li>
-        <li>
-          The current stable Thrift release (0.9.3) has a problem with Python 3. So we need to replace some files:
-          <ul>
-            <li>
-              Donwload following zip file and replace the `%PYTHON_FOLDER%\Lib\site-packages\thrift` folder by the one in the zip file:
-              <pre><a href="http://www.sg-dev.de/thrift.zip" target="_blank">http://www.sg-dev.de/thrift.zip</a></pre>
-            </li>
-          </ul>
-        </li>
-      </ul>
-
--->
 
     </div> <!-- /container -->
