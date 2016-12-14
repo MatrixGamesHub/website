@@ -242,7 +242,7 @@
 
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="GameInterface.OnTriggerEnter"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnTriggerEnter">[docs]</a>    <span class="k">def</span> <span class="nf">OnTriggerEnter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">actGroup</span><span class="p">):</span>
+<div class="viewcode-block" id="GameInterface.OnTriggerEnter"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnTriggerEnter">[docs]</a>    <span class="k">def</span> <span class="nf">OnTriggerEnter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Event method, which is called when an object enters a cell with an event object.</span>
 
@@ -254,7 +254,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="GameInterface.OnTriggerLeave"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnTriggerLeave">[docs]</a>    <span class="k">def</span> <span class="nf">OnTriggerLeave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">actGroup</span><span class="p">):</span>
+<div class="viewcode-block" id="GameInterface.OnTriggerLeave"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnTriggerLeave">[docs]</a>    <span class="k">def</span> <span class="nf">OnTriggerLeave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Event method, which is called when an object leaves a cell with an event object.</span>
 
@@ -266,7 +266,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="GameInterface.OnCollect"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnCollect">[docs]</a>    <span class="k">def</span> <span class="nf">OnCollect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collectable</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">actGroup</span><span class="p">):</span>
+<div class="viewcode-block" id="GameInterface.OnCollect"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnCollect">[docs]</a>    <span class="k">def</span> <span class="nf">OnCollect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collectable</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Event method, which is called when a collectable object is to be collected. To veto, the</span>
 <span class="sd">        method should return False.</span>
@@ -281,7 +281,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="GameInterface.OnRemove"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnRemove">[docs]</a>    <span class="k">def</span> <span class="nf">OnRemove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">removable</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">actGroup</span><span class="p">):</span>
+<div class="viewcode-block" id="GameInterface.OnRemove"><a class="viewcode-back" href="../../api/game.html#mtx.GameInterface.OnRemove">[docs]</a>    <span class="k">def</span> <span class="nf">OnRemove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">removable</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Event method, which is called when a removable object is to be removed. To veto, the</span>
 <span class="sd">        method should return False.</span>
@@ -365,6 +365,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_console</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span> <span class="o">=</span> <span class="n">Settings</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="Game.SetConsole"><a class="viewcode-back" href="../../api/game.html#mtx.Game.SetConsole">[docs]</a>    <span class="k">def</span> <span class="nf">SetConsole</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">console</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -390,6 +391,10 @@
 <span class="sd">            :class:`mtx.Settings`: The settings object of this game.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settings</span></div>
+
+<div class="viewcode-block" id="Game.AddAct"><a class="viewcode-back" href="../../api/game.html#mtx.Game.AddAct">[docs]</a>    <span class="k">def</span> <span class="nf">AddAct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">act</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddAct</span><span class="p">(</span><span class="n">act</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Game.NextLevel"><a class="viewcode-back" href="../../api/game.html#mtx.Game.NextLevel">[docs]</a>    <span class="k">def</span> <span class="nf">NextLevel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">levelNumber</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span><span class="o">.</span><span class="n">GetNumber</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
@@ -443,15 +448,17 @@
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="c1"># Create new ActGroup</span>
-        <span class="n">actGrp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">CreateActGroup</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">CreateActGroup</span><span class="p">()</span>
 
-        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_MoveObject</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_MoveObject</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
-            <span class="n">actGrp</span><span class="o">.</span><span class="n">Ready</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">Ready</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">ProcessActGroup</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">DiscardActGroup</span><span class="p">(</span><span class="n">actGrp</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">DiscardActGroup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span> <span class="o">=</span> <span class="kc">None</span>
+
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="Game.MovePlayer"><a class="viewcode-back" href="../../api/game.html#mtx.Game.MovePlayer">[docs]</a>    <span class="k">def</span> <span class="nf">MovePlayer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -500,15 +507,16 @@
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="c1"># Create new ActGroup</span>
-        <span class="n">actGrp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">CreateActGroup</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">CreateActGroup</span><span class="p">()</span>
 
-        <span class="n">actGrp</span><span class="o">.</span><span class="n">AddJumpAct</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_x</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddJumpAct</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_x</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_y</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_LeaveCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetCell</span><span class="p">(),</span> <span class="n">actGrp</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_EnterCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">nCell</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_LeaveCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetCell</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_EnterCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">nCell</span><span class="p">)</span>
 
-        <span class="n">actGrp</span><span class="o">.</span><span class="n">Ready</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">Ready</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_console</span><span class="o">.</span><span class="n">ProcessActGroup</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">return</span> <span class="kc">True</span></div>
 
@@ -536,7 +544,7 @@
         <span class="c1"># Jump the player</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">JumpObject</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">_MoveObject</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_MoveObject</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Moves an object in the given direction.</span>
 
@@ -545,7 +553,6 @@
 <span class="sd">            direction (:obj:`int`): Direction in which the object is to be moved.</span>
 <span class="sd">            moveDepth (:obj:`int`): The maximum number of adjacent moving objects that can be moved</span>
 <span class="sd">                at a time.</span>
-<span class="sd">            actGrp (mtx.ActGroup): All acts that occur during the move are added to this group.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            True, if the object could be moved, False otherwise.</span>
@@ -559,25 +566,25 @@
         <span class="k">if</span> <span class="n">nObj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">nObj</span><span class="o">.</span><span class="n">IsMovable</span><span class="p">():</span>
             <span class="c1"># If moveDepth is zero or the object on the neighbour cell could not be moved, then</span>
             <span class="c1"># return False.</span>
-            <span class="k">if</span> <span class="n">moveDepth</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_MoveObject</span><span class="p">(</span><span class="n">nObj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">moveDepth</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_MoveObject</span><span class="p">(</span><span class="n">nObj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">moveDepth</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
                 <span class="k">return</span> <span class="kc">False</span>
 
-        <span class="n">actGrp</span><span class="o">.</span><span class="n">AddMoveAct</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_x</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddMoveAct</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_x</span><span class="p">,</span> <span class="n">nCell</span><span class="o">.</span><span class="n">_y</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_LeaveCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetCell</span><span class="p">(),</span> <span class="n">actGrp</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_EnterCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">nCell</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_LeaveCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">GetCell</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_EnterCell</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">nCell</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="nf">_EnterCell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_EnterCell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="c1"># If any collectable objects are present, then ALL of them will be collected, if</span>
         <span class="c1"># they are accepted by the entering object. The top most object, that is not a</span>
         <span class="c1"># collectable will be treated separately.</span>
         <span class="n">nonCollectableFound</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">o</span><span class="o">.</span><span class="n">IsCollectable</span><span class="p">():</span>
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">OnCollect</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
-                    <span class="n">actGrp</span><span class="o">.</span><span class="n">AddCollectAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">OnCollect</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddCollectAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
                     <span class="n">cell</span><span class="o">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
             <span class="k">elif</span> <span class="ow">not</span> <span class="n">nonCollectableFound</span><span class="p">:</span>
                 <span class="c1"># The top most non-collectable object has been found, so make sure that no</span>
@@ -585,16 +592,16 @@
                 <span class="n">nonCollectableFound</span> <span class="o">=</span> <span class="kc">True</span>
 
                 <span class="k">if</span> <span class="n">o</span><span class="o">.</span><span class="n">IsRemovable</span><span class="p">():</span>
-                    <span class="k">if</span> <span class="n">o</span><span class="o">.</span><span class="n">RemoveOnEnter</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">OnRemove</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
-                        <span class="n">actGrp</span><span class="o">.</span><span class="n">AddRemoveAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">o</span><span class="o">.</span><span class="n">RemoveOnEnter</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">OnRemove</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddRemoveAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
                         <span class="n">cell</span><span class="o">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
                 <span class="k">elif</span> <span class="n">o</span><span class="o">.</span><span class="n">IsTrigger</span><span class="p">():</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">OnTriggerEnter</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">)</span>
-                    <span class="n">actGrp</span><span class="o">.</span><span class="n">AddTriggerEnterAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">OnTriggerEnter</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddTriggerEnterAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
 
         <span class="n">cell</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_LeaveCell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_LeaveCell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
         <span class="n">cell</span><span class="o">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
 
         <span class="c1"># Only treat the top most object.</span>
@@ -603,10 +610,10 @@
             <span class="k">return</span>
 
         <span class="k">if</span> <span class="n">o</span><span class="o">.</span><span class="n">IsTrigger</span><span class="p">():</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">OnTriggerLeave</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">)</span>
-            <span class="n">actGrp</span><span class="o">.</span><span class="n">AddTriggerLeaveAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">o</span><span class="o">.</span><span class="n">IsRemovable</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">o</span><span class="o">.</span><span class="n">RemoveOnEnter</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">OnRemove</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">actGrp</span><span class="p">):</span>
-             <span class="n">actGrp</span><span class="o">.</span><span class="n">AddRemoveAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">OnTriggerLeave</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddTriggerLeaveAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">o</span><span class="o">.</span><span class="n">IsRemovable</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">o</span><span class="o">.</span><span class="n">RemoveOnEnter</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">OnRemove</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">_actGrp</span><span class="o">.</span><span class="n">AddRemoveAct</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
              <span class="n">cell</span><span class="o">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">o</span><span class="p">)</span></div>
 </pre></div>
 

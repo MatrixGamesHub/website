@@ -155,6 +155,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">from</span> <span class="nn">..baseObjects</span> <span class="k">import</span> <span class="n">TriggerObject</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">UpdateAct</span>
 <span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">RegisterObjectClass</span>
 
 
@@ -176,11 +177,13 @@
 
 <div class="viewcode-block" id="Exit.Lock"><a class="viewcode-back" href="../../../api/objectExit.html#mtx.objects.Exit.Lock">[docs]</a>    <span class="k">def</span> <span class="nf">Lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_symbol</span> <span class="o">=</span> <span class="s1">&#39;E&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">True</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span><span class="o">.</span><span class="n">_field</span><span class="o">.</span><span class="n">_level</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">AddAct</span><span class="p">(</span><span class="n">UpdateAct</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="s1">&#39;locked&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="Exit.Unlock"><a class="viewcode-back" href="../../../api/objectExit.html#mtx.objects.Exit.Unlock">[docs]</a>    <span class="k">def</span> <span class="nf">Unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_symbol</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span><span class="o">.</span><span class="n">_field</span><span class="o">.</span><span class="n">_level</span><span class="o">.</span><span class="n">_game</span><span class="o">.</span><span class="n">AddAct</span><span class="p">(</span><span class="n">UpdateAct</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetId</span><span class="p">(),</span> <span class="s1">&#39;locked&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span></div></div>
 
 
 <span class="n">RegisterObjectClass</span><span class="p">(</span><span class="n">Exit</span><span class="p">)</span>

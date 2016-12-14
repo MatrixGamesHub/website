@@ -362,7 +362,7 @@ items that need to be collected) or to get a particular object (e.g. the player)
 <h3>Event related<a class="headerlink" href="#event-related" title="Permalink to this headline">¶</a></h3>
 <span class="target" id="ontriggerenter"></span><dl class="method">
 <dt>
-<code class="descclassname">Game.</code><code class="descname">OnTriggerEnter</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">Game.</code><code class="descname">OnTriggerEnter</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em><span class="sig-paren">)</span></dt>
 <dd><p>Event method, which is called when an object enters a cell with an event object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -381,7 +381,7 @@ triggered.</li>
 
 <span class="target" id="ontriggerleave"></span><dl class="method">
 <dt>
-<code class="descclassname">Game.</code><code class="descname">OnTriggerLeave</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">Game.</code><code class="descname">OnTriggerLeave</code><span class="sig-paren">(</span><em>trigger</em>, <em>source</em><span class="sig-paren">)</span></dt>
 <dd><p>Event method, which is called when an object leaves a cell with an event object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -400,7 +400,7 @@ triggered.</li>
 
 <span class="target" id="oncollect"></span><dl class="method">
 <dt>
-<code class="descclassname">Game.</code><code class="descname">OnCollect</code><span class="sig-paren">(</span><em>collectable</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">Game.</code><code class="descname">OnCollect</code><span class="sig-paren">(</span><em>collectable</em>, <em>source</em><span class="sig-paren">)</span></dt>
 <dd><p>Event method, which is called when a collectable object is to be collected. To veto, the
 method should return False.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -423,7 +423,7 @@ otherwise.</p>
 
 <span class="target" id="onremove"></span><dl class="method">
 <dt>
-<code class="descclassname">Game.</code><code class="descname">OnRemove</code><span class="sig-paren">(</span><em>removable</em>, <em>source</em>, <em>actGroup</em><span class="sig-paren">)</span></dt>
+<code class="descclassname">Game.</code><code class="descname">OnRemove</code><span class="sig-paren">(</span><em>removable</em>, <em>source</em><span class="sig-paren">)</span></dt>
 <dd><p>Event method, which is called when a removable object is to be removed. To veto, the
 method should return False.</p>
 <table class="docutils field-list" frame="void" rules="none">
