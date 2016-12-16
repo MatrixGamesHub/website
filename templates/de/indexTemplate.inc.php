@@ -86,6 +86,9 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="http://forum.matrixgames.rocks">Forum</a>
+            </li>
             <li <? if(MENU == 'download') echo "class=\"active\""; ?>>
               <a href="download.php">Get Matrix Games</a>
             </li>
